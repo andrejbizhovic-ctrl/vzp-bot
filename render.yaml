@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: vzp-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python vzp_bot.py
+    envVars:
+      - key: VZP_TOKEN
+        sync: false
